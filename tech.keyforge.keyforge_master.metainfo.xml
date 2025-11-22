@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>tech.keyforge.keyforge_master</id>
+  <id>tech.keyforge.master</id>
   <developer id="tech.keyforge">
     <name>KeyForge</name>
   </developer>
   <name>KeyForge Master</name>
-  <summary>Configurator for KeyForge devices</summary>
+  <summary>Configurator software for KeyForge devices</summary>
   <url type="homepage">https://keyforge.tech/</url>
-  <url type="help">https://keyforge.tech/setup</url>
+  <url type="help">https://keyforge.tech/configurator</url>
+
 
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary=https://keyforge.tech/end-user-agreement/</project_license>
+  <project_license>LicenseRef-proprietary=https://keyforge.tech/terms-conditions/#kf-master-eula</project_license>
 
   <content_rating type="oars-1.1" />
-  <launchable type="desktop-id">tech.keyforge.keyforge_master.desktop</launchable>
+  <launchable type="desktop-id">tech.keyforge.master.desktop</launchable>
   
   <categories>
     <category>Settings</category>
@@ -25,7 +26,6 @@
     <keyword>configurator</keyword>
     <keyword>shortcuts</keyword>
     <keyword>macro</keyword>
-
   </keywords>
 
   <branding>
@@ -33,28 +33,38 @@
     <color type="primary" scheme_preference="dark">#5e6567</color>
   </branding>
 
+  <icon type="stock">tech.keyforge.master</icon>
+
   <screenshots>
     <screenshot type="default">
       <caption>Dashboard</caption>
-      <image>https://master.keyforge.tech/screenshots/dashboard.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Create your first configurtion</caption>
-      <image>https://master.keyforge.tech/screenshots/first-config.png</image>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%201.png</image>
     </screenshot>
     <screenshot>
       <caption>Macropad MK-01 configurator</caption>
-      <image>https://master.keyforge.tech/screenshots/MK-01-configurator.png</image>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%202.png</image>
     </screenshot>
-        <screenshot>
-      <caption>Settings / Light theme</caption>
-      <image>https://master.keyforge.tech/screenshots/settings.png</image>
+    <screenshot>
+      <caption>Settings panel</caption>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%203.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Actions Forge - create custom actions</caption>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%204.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Actions Forge - create custom actions</caption>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%205.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Actions list view</caption>
+      <image>https://yybqskjzlxabjtcthvcf.supabase.co/storage/v1/object/public/Flatpak%20releases/screenshots/KeyForge%20Master%20Configurator%206.png</image>
     </screenshot>
   </screenshots>
 
 
   <description>
-    <p>KeyForge Master configurator is a intuitive software that lets you create custom macros and assign predefined shortcuts, turning your KeyForge device into a tailored productivity powerhouse.</p>
+    <p>KeyForge Master configurator is a intuitive software that lets you create custom actions and configurations, turning your KeyForge device into a tailored productivity powerhouse.</p>
     <p>Work smarter, not harder.</p>
 
     <ul>
@@ -64,18 +74,18 @@
     </ul>
 
     <p>
-    You can create multiple configurations for fun and work in the Settings panel. Switch the active configuration by pressing the SK key on your device or using the Settings panel. 
-    You can create your own actions/macros using Actions Forge, our intuitive solution for creating macros, developed to boost your productivity.
+    You can create multiple configurations for fun and work in the Settings panel. Switch the active configuration by pressing the Super Key on your device or using the Settings panel. 
+    You can create custom actions/macros using Actions Forge, our intuitive solution for creating macros, developed to boost your productivity.
     </p>
   </description>
 
   <releases>
-    <release version="v0.5" date="2024-05-01">
+    <release version="v1.1.2" date="2025-11-22">
       <description>
-        <p>General</p>
         <ul>       
-          <li>First app release before the device market release.</li>
-          <li>You will have access to all the features when the Macropad MK-01 hits the market.</li>
+          <li>Updated app icon</li>
+          <li>Active config overlay - hold the KeyForge device's SuperKey for 3 seconds to display a quick remind about the active config details.</li>
+          <li>Overall UI improvements</li>
         </ul>      
       </description>
     </release>

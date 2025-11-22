@@ -1,9 +1,9 @@
 [Desktop Entry]
-Version=1.0
+Version=1.1.2
 Type=Application
 Terminal=false
 Name=KeyForge Master
 Comment=Customize your KeyForge devices
 Categories=Settings;HardwareSettings;
-Icon=tech.keyforge.keyforge_master
+Icon=tech.keyforge.master
 Exec=run.sh
