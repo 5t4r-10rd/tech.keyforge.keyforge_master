@@ -1,5 +1,5 @@
 {
-  "app-id": "tech.keyforge.master",
+  "app-id": "tech.keyforge.keyforge_master",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
@@ -16,8 +16,7 @@
     "--device=all",
     "--socket=session-bus",
     "--filesystem=/run/udev:ro", 
-    "--filesystem=/sys:ro",
-    "--filesystem=/dev:ro"
+    "--filesystem=/sys:ro"
   ],
   "modules": [
     {
@@ -27,23 +26,23 @@
         "mkdir /app/main",
         "tar -xf keyforge-master_1.1.2_flatpak.tar.xz -C /app/main --strip-components=1",
         "rm keyforge-master_1.1.2_flatpak.tar.xz",
-        "install -Dm 644 tech.keyforge.master.desktop /app/share/applications/tech.keyforge.master.desktop",
-        "install -Dm 644 tech.keyforge.master.metainfo.xml /app/share/metainfo/tech.keyforge.master.metainfo.xml",
+        "install -Dm 644 tech.keyforge.keyforge_master.desktop /app/share/applications/tech.keyforge.keyforge_master.desktop",
+        "install -Dm 644 tech.keyforge.keyforge_master.metainfo.xml /app/share/metainfo/tech.keyforge.keyforge_master.metainfo.xml",
         "install -Dm 755 run.sh /app/bin/run.sh",
-        "install -Dm 644 64.png /app/share/icons/hicolor/64/apps/tech.keyforge.master.png",
-        "install -Dm 644 256.png /app/share/icons/hicolor/256/apps/tech.keyforge.master.png",
-        "install -Dm 644 512.png /app/share/icons/hicolor/512/apps/tech.keyforge.master.png",
-        "install -Dm 644 scalable.svg /app/share/icons/hicolor/scalable/apps/tech.keyforge.master.svg"
+        "install -Dm 644 64.png /app/share/icons/hicolor/64/apps/tech.keyforge.keyforge_master.png",
+        "install -Dm 644 256.png /app/share/icons/hicolor/256/apps/tech.keyforge.keyforge_master.png",
+        "install -Dm 644 512.png /app/share/icons/hicolor/512/apps/tech.keyforge.keyforge_master.png",
+        "install -Dm 644 scalable.svg /app/share/icons/hicolor/scalable/apps/tech.keyforge.keyforge_master.svg"
       ],
       "sources": [
         {
           "type": "file",
           "url": "https://master.keyforge.tech/flatpak-releases/keyforge-master_1.1.2_flatpak.tar.xz",
-          "sha256": "ae6ce7764a587ca00e2f57a3eea037d9960184b05e4c9013a7249880030b8417"
+          "sha256": "9f9a12d68c8873e9c8335607c47251ff529195b3be43f7bb36b2775f3d9c5d1a"
         },
         {
           "type": "file",
-          "path": "tech.keyforge.master.metainfo.xml"
+          "path": "tech.keyforge.keyforge_master.metainfo.xml"
         },
         {
           "type": "file",
@@ -63,7 +62,7 @@
         },
         {
           "type": "file",
-          "path": "tech.keyforge.master.desktop"
+          "path": "tech.keyforge.keyforge_master.desktop"
         },
         {
           "type": "script",

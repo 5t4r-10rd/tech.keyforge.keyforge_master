@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>tech.keyforge.master</id>
+  <id>tech.keyforge.keyforge_master</id>
   <developer id="tech.keyforge">
     <name>KeyForge</name>
   </developer>
@@ -14,7 +14,7 @@
   <project_license>LicenseRef-proprietary=https://keyforge.tech/terms-conditions/#kf-master-eula</project_license>
 
   <content_rating type="oars-1.1" />
-  <launchable type="desktop-id">tech.keyforge.master.desktop</launchable>
+  <launchable type="desktop-id">tech.keyforge.keyforge_master.desktop</launchable>
   
   <categories>
     <category>Settings</category>
@@ -33,7 +33,7 @@
     <color type="primary" scheme_preference="dark">#5e6567</color>
   </branding>
 
-  <icon type="stock">tech.keyforge.master</icon>
+  <icon type="stock">tech.keyforge.keyforge_master</icon>
 
   <screenshots>
     <screenshot type="default">
