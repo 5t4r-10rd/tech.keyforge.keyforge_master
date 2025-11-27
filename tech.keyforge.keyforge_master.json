@@ -1,44 +1,43 @@
 {
   "app-id": "tech.keyforge.keyforge_master",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.node22"
+    "org.freedesktop.Sdk.Extension.node24"
   ],
   "base": "org.electronjs.Electron2.BaseApp",
-  "base-version": "24.08",
-  "command": "run.sh",
+  "base-version": "25.08",
+  "separate-locales": false,
+  "command": "start-keyforge-master.sh",
   "finish-args": [
     "--share=ipc",
     "--share=network",
     "--socket=x11",
     "--device=all",
-    "--socket=session-bus",
-    "--filesystem=/run/udev:ro", 
-    "--filesystem=/sys:ro"
+    "--allow=bluetooth",
+    "--filesystem=/run/udev:ro",
+    "--filesystem=/sys:ro",
+    "--system-talk-name=org.freedesktop.UDisks2",
+    "--talk-name=org.freedesktop.Flatpak"
   ],
   "modules": [
     {
       "name": "keyforge-master",
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir /app/main",
-        "tar -xf keyforge-master_1.1.2_flatpak.tar.xz -C /app/main --strip-components=1",
-        "rm keyforge-master_1.1.2_flatpak.tar.xz",
-        "install -Dm 644 tech.keyforge.keyforge_master.desktop /app/share/applications/tech.keyforge.keyforge_master.desktop",
+        "mkdir /app/main/",
+        "cp -a * /app/main/ || true",
+        "install -Dm 644 /app/main/resources/tech.keyforge.keyforge_master.desktop /app/share/applications/tech.keyforge.keyforge_master.desktop",
         "install -Dm 644 tech.keyforge.keyforge_master.metainfo.xml /app/share/metainfo/tech.keyforge.keyforge_master.metainfo.xml",
-        "install -Dm 755 run.sh /app/bin/run.sh",
-        "install -Dm 644 64.png /app/share/icons/hicolor/64/apps/tech.keyforge.keyforge_master.png",
-        "install -Dm 644 256.png /app/share/icons/hicolor/256/apps/tech.keyforge.keyforge_master.png",
-        "install -Dm 644 512.png /app/share/icons/hicolor/512/apps/tech.keyforge.keyforge_master.png",
-        "install -Dm 644 scalable.svg /app/share/icons/hicolor/scalable/apps/tech.keyforge.keyforge_master.svg"
+        "install -Dm 755 start-keyforge-master.sh /app/bin/start-keyforge-master.sh",
+        "install -Dm 644 icon.svg /app/share/icons/hicolor/scalable/apps/tech.keyforge.keyforge_master.svg"
       ],
       "sources": [
         {
-          "type": "file",
+          "type": "archive",
           "url": "https://master.keyforge.tech/flatpak-releases/keyforge-master_1.1.2_flatpak.tar.xz",
-          "sha256": "9f9a12d68c8873e9c8335607c47251ff529195b3be43f7bb36b2775f3d9c5d1a"
+          "sha256": "ecd9bf252661b195a54a11bdf26f7e84b70469f75bfb5c07a2ce44a0e379a277"
         },
         {
           "type": "file",
@@ -46,27 +45,11 @@
         },
         {
           "type": "file",
-          "path": "icons/64.png"
-        },
-        {
-          "type": "file",
-          "path": "icons/256.png"
-        },
-        {
-          "type": "file",
-          "path": "icons/512.png"
-        },
-        {
-          "type": "file",
-          "path": "icons/scalable.svg"
-        },
-        {
-          "type": "file",
-          "path": "tech.keyforge.keyforge_master.desktop"
+          "path": "icon.svg"
         },
         {
           "type": "script",
-          "dest-filename": "run.sh",
+          "dest-filename": "start-keyforge-master.sh",
           "commands": [
             "zypak-wrapper.sh /app/main/Keyforge_Master_Configurator \"$@\""
           ]
