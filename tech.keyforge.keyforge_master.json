@@ -1,0 +1,60 @@
+{
+  "app-id": "tech.keyforge.keyforge_master",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.node24"
+  ],
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "25.08",
+  "separate-locales": false,
+  "command": "start-keyforge-master.sh",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=x11",
+    "--device=all",
+    "--allow=bluetooth",
+    "--filesystem=/run/udev:ro",
+    "--filesystem=/sys:ro",
+    "--system-talk-name=org.freedesktop.UDisks2",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "modules": [
+    {
+      "name": "keyforge-master",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir /app/main/",
+        "cp -a * /app/main/ || true",
+        "install -Dm 644 /app/main/resources/tech.keyforge.keyforge_master.desktop /app/share/applications/tech.keyforge.keyforge_master.desktop",
+        "install -Dm 644 tech.keyforge.keyforge_master.metainfo.xml /app/share/metainfo/tech.keyforge.keyforge_master.metainfo.xml",
+        "install -Dm 755 start-keyforge-master.sh /app/bin/start-keyforge-master.sh",
+        "install -Dm 644 icon.svg /app/share/icons/hicolor/scalable/apps/tech.keyforge.keyforge_master.svg"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://master.keyforge.tech/flatpak-releases/keyforge-master_1.1.2_flatpak.tar.xz",
+          "sha256": "ecd9bf252661b195a54a11bdf26f7e84b70469f75bfb5c07a2ce44a0e379a277"
+        },
+        {
+          "type": "file",
+          "path": "tech.keyforge.keyforge_master.metainfo.xml"
+        },
+        {
+          "type": "file",
+          "path": "icon.svg"
+        },
+        {
+          "type": "script",
+          "dest-filename": "start-keyforge-master.sh",
+          "commands": [
+            "zypak-wrapper.sh /app/main/Keyforge_Master_Configurator \"$@\""
+          ]
+        }
+      ]
+    }
+  ]
+}
