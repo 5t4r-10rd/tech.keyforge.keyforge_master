@@ -44,6 +44,10 @@
         },
         {
           "type": "file",
+          "path": "tech.keyforge.keyforge_master.desktop"
+        },
+        {
+          "type": "file",
           "path": "tech.keyforge.keyforge_master.metainfo.xml"
         },
         {
