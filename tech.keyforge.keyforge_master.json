@@ -39,7 +39,7 @@
       "sources": [
         {
           "type": "archive",
-          "path": "https://master.keyforge.tech/app-releases/flatpak/keyforge-master_2.0.0_flatpak.tar.xz",
+          "url": "https://master.keyforge.tech/app-releases/flatpak/keyforge-master_2.0.0_flatpak.tar.xz",
           "sha256": "f533453b9a4f2978b3404db90ea2b9f39dc507a163a66d9ea568a267f4e5ee30"
         },
         {
